@@ -1,9 +1,13 @@
-function App() {
+import Header from "./components/Header";
+import FeedbackItem from "./components/FeedbackItem";
+
+export default function App() {
     return (
-        <div className='container'>
-            <h1>My App</h1>   
-        </div>
+        <>
+            <Header text="Hello world"/>
+            <div className='container'>
+                   <FeedbackItem/>
+            </div>
+        </>
     )
 }
-
-export default App;
