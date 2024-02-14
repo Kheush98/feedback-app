@@ -1,10 +1,19 @@
-export default function FeedbackItem() {
+import PropTypes from "prop-types"
+import Card from "./shared/Card"
+
+export default function FeedbackItem({rating, text}) {
+
   return (
-    <div className="card">
-      <div className="num-display">10</div>
+    <Card>
+      <div className="num-display">{rating}</div>
       <div className="text-display">
-        This an example of a Feedback item
+        {text}
       </div>
-    </div>
+    </Card>
   )
+}
+
+FeedbackItem.propTypes = {
+  rating: PropTypes.number.isRequired,
+  text: PropTypes.string.isRequired
 }
